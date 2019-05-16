@@ -1,0 +1,66 @@
+.ribbon{
+	font-size: 20px;
+	position: relative;
+	display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text{
+	display: inline-block;
+	padding: 0.5em 1em;
+	min-width: 20em;
+	line-height: 1.2em;
+  background: #D7ff2A;
+  color: #fff;
+	position: relative;
+}
+
+.ribbon:after,.ribbon:before,
+.text:before,.text:after,
+.bold:before{
+	content: '';
+	position: absolute;
+	border-style: solid;
+}
+
+.ribbon:before{
+	top: 0.5em;
+	left: -2em;
+	border-width: 1.1em 1em 1.1em 3em;
+	border-color: #CCFE30 transparent #CCFE30 #CCFE30;
+	z-index: -2;
+	transform: rotate(180deg);
+}
+
+.text:before{
+	top: 100%;
+	left: 0;
+	border-width: .5em 2em 0 0;
+	border-color: #95FC44 transparent transparent transparent;
+	transform: rotateY(180deg);
+}
+
+.text:after{
+	top: 100%;
+	right: 0;
+	border-width: .5em 2em 0 0;
+	border-color: #95FC44 transparent transparent transparent;
+}
+
+.ribbon:after, .bold:before{
+	top: 0.5em;
+	right: -2em;
+	border-width: 1.1em 1em 1.1em 3em;
+	border-color: #CCFE30 transparent #CCFE30 #CCFE30;
+	z-index: -1;
+}
+
+.bold:before{
+	border-color: #EBECED transparent #EBECED #EBECED;
+	top: 0.7em;
+	right: -2.3em;
+}

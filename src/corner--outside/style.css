@@ -1,0 +1,154 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #f0f0f0;
+}
+
+.box {
+	position: relative;
+	max-width: 600px;
+	width: 90%;
+	height: 400px;
+	background: #fff;
+	box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+.corner-outside {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.corner-outside::before,
+.corner-outside::after {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	display: block;
+	border: 5px solid #1acd2e;
+}
+
+.corner-outside div {
+	position: absolute;
+	display: block;
+	width: 225px;
+	padding: 15px 0;
+	background-color: #1acd2e;
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	color: #fff;
+	font: 700 18px/1 'Lato', sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.corner-outside-top-left {
+	top: -10px;
+	left: -10px;
+}
+
+.corner-outside-top-left::before,
+.corner-outside-top-left::after {
+	border-top-color: transparent;
+	border-left-color: transparent;
+}
+
+.corner-outside-top-left::before {
+	top: 0;
+	right: 0;
+}
+
+.corner-outside-top-left::after {
+	bottom: 0;
+	left: 0;
+}
+
+.corner-outside-top-left div {
+	right: -25px;
+	top: 30px;
+	transform: rotate(-45deg);
+}
+
+.corner-outside-top-right {
+	top: -10px;
+	right: -10px;
+}
+
+.corner-outside-top-right::before,
+.corner-outside-top-right::after {
+	border-top-color: transparent;
+	border-right-color: transparent;
+}
+
+.corner-outside-top-right::before {
+	top: 0;
+	left: 0;
+}
+
+.corner-outside-top-right::after {
+	bottom: 0;
+	right: 0;
+}
+
+.corner-outside-top-right div {
+	left: -25px;
+	top: 30px;
+	transform: rotate(45deg);
+}
+
+.corner-outside-bottom-left {
+	bottom: -10px;
+	left: -10px;
+}
+
+.corner-outside-bottom-left::before,
+.corner-outside-bottom-left::after {
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+}
+
+.corner-outside-bottom-left::before {
+	bottom: 0;
+	right: 0;
+}
+
+.corner-outside-bottom-left::after {
+	top: 0;
+	left: 0;
+}
+
+.corner-outside-bottom-left div {
+	right: -25px;
+	bottom: 30px;
+	transform: rotate(225deg);
+}
+
+.corner-outside-bottom-right {
+	bottom: -10px;
+	right: -10px;
+}
+
+.corner-outside-bottom-right::before,
+.corner-outside-bottom-right::after {
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+}
+
+.corner-outside-bottom-right::before {
+	bottom: 0;
+	left: 0;
+}
+
+.corner-outside-bottom-right::after {
+	top: 0;
+	right: 0;
+}
+
+.corner-outside-bottom-right div {
+	left: -25px;
+	bottom: 30px;
+	transform: rotate(-225deg);
+}
